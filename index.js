@@ -10,10 +10,10 @@ dotenv.config();  // getting all env keys from here
 const app = express()
 
 app.use(express.json());
-// const MONGO_URL = "mongodb://localhost:27017/";
+//  const MONGO_URL = "mongodb://localhost:27017/";
 
 app.use(cors());
- const MONGO_URL = process.env.MONGO_URL; // if MONGO_URL is not defined in .env file, it will take localhost url
+  const MONGO_URL = process.env.MONGO_URL; // if MONGO_URL is not defined in .env file, it will take localhost url
 
 //To create connection 
 async function createConnection(){

@@ -6,10 +6,12 @@ dotenv.config();  // getting all env keys from here
 const CLIENT_ID = process.env.CLIENT_ID; // '101234567890-abc123def456.apps.googleusercontent.com';
 const CLIENT_SECRET = process.env.CLIENT_SECRET; // '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';
 const REFRESH_TOKEN = process.env.REFRESH_TOKEN; // '1//04i3g4h5j6k7l8m9n0pqrstu-vwxyz1234567890abcdefg1234567890abcdefg';
-const RIDERECT_URI ='https://developers.google.com/oauthplayground';
-const oAuth2Client =  new google.auth.OAuth2(CLIENT_ID,CLIENT_SECRET,RIDERECT_URI);
-oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN })       //Creating access Token freshly using refresh token
 
+const RIDERECT_URI ='https://developers.google.com/oauthplayground';
+
+const oAuth2Client =  new google.auth.OAuth2(CLIENT_ID,CLIENT_SECRET,RIDERECT_URI);
+
+oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN })       //Creating access Token freshly using refresh token
 
 export async function sendMail(data) {
 
